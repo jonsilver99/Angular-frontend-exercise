@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  BASE_URL: "http://localhost:4200",
-  MOVIES_API:"http://www.omdbapi.com"
+  BASE_URL: "https://angular-cinema.herokuapp.com",
+  MOVIES_API:"https://www.omdbapi.com"
 };
