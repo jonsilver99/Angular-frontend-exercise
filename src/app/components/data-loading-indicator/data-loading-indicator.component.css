@@ -4,13 +4,13 @@
     align-items: center;
 }
 
-#loadingPicsIndicator {
+#loadingMoviesIndicator {
     margin: 0 auto;
     width: 90px;
     text-align: center;
 }
   
-#loadingPicsIndicator > div {
+#loadingMoviesIndicator > div {
     width: 18px;
     height: 18px;
     /* border-radius: 100%; */
@@ -19,25 +19,25 @@
     animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
-#loadingPicsIndicator .bounce1 {
+#loadingMoviesIndicator .bounce1 {
     background-color: #ac89da;
     -webkit-animation-delay: -0.48s;
     animation-delay: -0.48s;
 }
 
-#loadingPicsIndicator .bounce2 {
+#loadingMoviesIndicator .bounce2 {
     background-color: #6f3cb2;
     -webkit-animation-delay: -0.32s;
     animation-delay: -0.32s;
 }
 
-#loadingPicsIndicator .bounce3 {
+#loadingMoviesIndicator .bounce3 {
     background-color: #5f1abb;
     -webkit-animation-delay: -0.16s;
     animation-delay: -0.16s;
 }
 
-#loadingPicsIndicator .bounce4 {
+#loadingMoviesIndicator .bounce4 {
     background-color: #36017b;
 }
 

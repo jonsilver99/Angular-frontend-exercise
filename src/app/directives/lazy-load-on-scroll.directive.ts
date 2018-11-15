@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
 export class LazyLoadOnScrollDirective implements OnInit, OnDestroy {
 
     @Output()
-    public DivBottomReached: EventEmitter<HTMLElement> = new EventEmitter<HTMLElement>()
+    public DivBottomReached: EventEmitter<any> = new EventEmitter<any>()
 
     private ScrollEvents: Observable<any> = Observable.fromEvent(this.elRef.nativeElement, "scroll")
     private ScrollSubscription: Subscription;
@@ -22,13 +22,9 @@ export class LazyLoadOnScrollDirective implements OnInit, OnDestroy {
     }
 
     observeScrollActions() {
+        // subscribe to scroll events on div - once scroll bottom reached bubble event up
         this.ScrollSubscription = this.ScrollEvents
-            .map((event) => {
-                // console.log(`Content Scroll height: ${this.elRef.nativeElement.scrollHeight}`)
-                // console.log(`Div height: ${this.elRef.nativeElement.clientHeight}`)
-                // console.log(`Scroll position from top : ${this.elRef.nativeElement.scrollTop}`)
-                return this.elRef.nativeElement.scrollTop;
-            })
+            .map(() => this.elRef.nativeElement.scrollTop)
             .filter((scrollTopValue) => {
                 return Math.ceil(scrollTopValue) >= this.elRef.nativeElement.scrollHeight - this.elRef.nativeElement.clientHeight
             })
@@ -36,7 +32,7 @@ export class LazyLoadOnScrollDirective implements OnInit, OnDestroy {
             .subscribe(
             (scrollTopValue) => {
                 this.elRef.nativeElement.scrollTop = scrollTopValue;
-                this.DivBottomReached.emit(this.elRef.nativeElement);
+                this.DivBottomReached.emit('div bottom reached');
             },
             (err) => console.log(err)
             )

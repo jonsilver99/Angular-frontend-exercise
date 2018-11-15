@@ -21,5 +21,4 @@ export class MovieCreateModalComponent implements OnInit {
             .distinctUntilChanged()
             .share()
     }
-
 }

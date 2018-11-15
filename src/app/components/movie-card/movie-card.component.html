@@ -1,9 +1,8 @@
-<!-- <div class="inner-card" id="{{MovieDetails.imdbID}}" [ngStyle]="{'background-image':'url('+ MovieDetails.Poster + ')'}"> -->
 <div class="inner-card" id="{{MovieDetails.imdbID}}">
+   
     <img appImageResolve class="background" src="{{MovieDetails.Poster}}" alt="">
 
     <div class="action-buttons">
-
         <span class="edit" (click)="openEditModal()">
             <i class="fa fa-edit"></i>
         </span>

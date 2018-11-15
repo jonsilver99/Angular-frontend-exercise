@@ -4,7 +4,6 @@
         <h2 *ngIf="EditedMovie; else createNew">
             Edit movie: {{EditedMovie.Title}}
         </h2>
-
         <ng-template #createNew>
             <h2>Create new movie</h2>
         </ng-template>

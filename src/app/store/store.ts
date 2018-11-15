@@ -21,7 +21,7 @@ export class Store {
         })
     }
 
-    // actions
+    // Actions
     appendMovies(newMovies: Movie[]) {
         let oldMovieList = this.currentState.MovieList;
         let newState = Array.isArray(oldMovieList) ? [...oldMovieList, ...newMovies] : newMovies
