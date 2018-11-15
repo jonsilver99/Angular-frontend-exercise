@@ -66,6 +66,7 @@ input[type="text"]:focus{
     color: white;
     font-weight: bold;
     font-size: .9rem;
+    cursor: pointer;
 }
 
 .form-buttons-group > button:first-child{
@@ -100,5 +101,5 @@ input[type="text"]:focus{
 }
 
 .form-buttons-group > button:disabled:hover{
-    cursor: not-allowed;
+    cursor: not-allowed !important;
 }
