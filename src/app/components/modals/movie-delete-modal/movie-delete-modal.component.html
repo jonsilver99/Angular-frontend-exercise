@@ -1,0 +1,12 @@
+<div id="bg-overlay" *ngIf="MovieToDelete$ | async as movieToDelete">
+    <div id="movie-form" class="prompt">
+        <div class="form-group">
+            <label>Are you sure you wish to delete "{{movieToDelete.Title}}"</label>
+        </div>
+
+        <div class="form-group form-buttons-group">
+            <button type="button" class="btn-delete" (click)="deleteMovie(movieToDelete)">Delete</button>
+            <button type="button" class="btn-cancel" (click)="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>

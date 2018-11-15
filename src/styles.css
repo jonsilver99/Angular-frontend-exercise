@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+html{
+    font-size: 16px
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+/* Utils */
+
+.pad-light{
+    padding: 1rem;
+}
+
+.pad-medium{
+    padding: 2rem;
+}
+
+.pad-heavy{
+    padding: 3rem;
+}
+
+.pad-sides-light{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pad-sides-medium{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.pad-sides-heavy{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+

@@ -1,0 +1,80 @@
+:host{
+}
+
+.inner-card{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: 100% 100% !important;
+    position: relative;
+}
+
+.inner-card > img.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+.inner-card:hover > .action-buttons{
+    opacity: 1;
+    transition: all 50ms linear 50ms;
+} 
+
+.default-mode{
+    height: initial !important;
+    width: initial !important;
+    display: block !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+}
+
+.action-buttons{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 20%);
+    color: white;
+    padding: .25rem;
+    opacity: 0;
+    transition: all 50ms linear 50ms;
+    text-align: center;
+}
+
+.action-buttons > span{
+    cursor: pointer;
+    margin: .5rem;
+    font-size: 1.25rem;
+}    
+
+.action-buttons > .edit:hover{
+    color: #a97ee3;
+}
+
+.action-buttons > .delete:hover{
+    color: #d51515;   
+}
+
+.movie-details{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #00000099;
+    color: white;
+    display: block;
+}
+
+.movie-details > span{
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}    

@@ -1,0 +1,5 @@
+span.invalid-notice{
+    color: red;
+    margin: 0 1vh;
+    font-size: .8rem;
+}

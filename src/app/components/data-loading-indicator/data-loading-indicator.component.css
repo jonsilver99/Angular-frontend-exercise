@@ -1,0 +1,57 @@
+#indicator-container {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+#loadingPicsIndicator {
+    margin: 0 auto;
+    width: 90px;
+    text-align: center;
+}
+  
+#loadingPicsIndicator > div {
+    width: 18px;
+    height: 18px;
+    /* border-radius: 100%; */
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+#loadingPicsIndicator .bounce1 {
+    background-color: #ac89da;
+    -webkit-animation-delay: -0.48s;
+    animation-delay: -0.48s;
+}
+
+#loadingPicsIndicator .bounce2 {
+    background-color: #6f3cb2;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+#loadingPicsIndicator .bounce3 {
+    background-color: #5f1abb;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+#loadingPicsIndicator .bounce4 {
+    background-color: #36017b;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% { 
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}

@@ -1,0 +1,3 @@
+<div id="bg-overlay" *ngIf="EditedMovie$ | async as editedMovie">
+    <app-movie-form [EditedMovie]='editedMovie'></app-movie-form>
+</div>

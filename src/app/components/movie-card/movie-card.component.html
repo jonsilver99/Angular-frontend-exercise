@@ -1,0 +1,24 @@
+<!-- <div class="inner-card" id="{{MovieDetails.imdbID}}" [ngStyle]="{'background-image':'url('+ MovieDetails.Poster + ')'}"> -->
+<div class="inner-card" id="{{MovieDetails.imdbID}}">
+    <img appImageResolve class="background" src="{{MovieDetails.Poster}}" alt="">
+
+    <div class="action-buttons">
+
+        <span class="edit" (click)="openEditModal()">
+            <i class="fa fa-edit"></i>
+        </span>
+        <span class="delete" (click)="openDeleteModal()">
+            <i class="fa fa-trash"></i>
+        </span>
+    </div>
+
+    <div class="movie-details">
+        <span class="title">
+            {{ MovieDetails.Title | filterNonEnglish | capitalizeFirstChar }}
+        </span>
+        <span class="type-and-year">
+            {{ MovieDetails.Type }} ({{ MovieDetails.Year }})
+        </span>
+    </div>
+
+</div>

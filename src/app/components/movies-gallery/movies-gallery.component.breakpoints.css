@@ -1,0 +1,104 @@
+/**************************************
+    Flexbox - with custom break points
+***************************************/
+
+:host{
+    flex: 6;
+}
+
+#scrollHelper{
+    height: 100%;
+    width: 100%;
+}
+
+#create-new-button{
+    position: absolute;
+    bottom: calc(100% - 48px);
+    left: 96px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    overflow: hidden;
+    cursor: pointer;
+    color: #00000099;    
+}
+
+#create-new-button:hover{
+    cursor: pointer;
+    color: rebeccapurple;
+}
+
+#gallery{
+    position: relative;
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3rem 5rem;
+    justify-content: flex-start;
+    min-width: 500px;
+}
+
+.gallery-item{
+    background: white;
+    box-shadow: -1px 1px 5px darkgrey;
+    margin: 16px;
+    width: 70%;        
+    /* min-width: 250px; */
+    height: 340px;    
+    min-height: 300px;
+    transition: all 50ms linear;   
+    
+    /* test when movie heights dont fill the gallery and its not scrollable */
+    /* height: 140px !important;*/
+}
+
+.gallery-item:hover{
+    transform: scale(1.05,1.05);  
+    transition: all 50ms linear;   
+}
+
+.loading-indicator{
+    visibility: hidden;
+}
+
+.loading-indicator.revealed{
+    visibility: visible;
+}
+
+
+
+/*******************
+    breakpoints
+*******************/
+@media all and (max-width: 640px){
+    .gallery-item{
+        margin: 16px auto;
+    }
+}
+
+@media all and (min-width: 640px) and (max-width: 940px) { 
+    .gallery-item{
+        width: calc((100% - 80px)/2);        
+    }        
+}
+
+@media all and (min-width: 940px) and (max-width: 1240px) { 
+    .gallery-item{
+        width: calc((100% - 96px)/3);
+    }        
+}
+
+@media all and (min-width: 1240px) and (max-width: 1530px) { 
+    .gallery-item{
+        width: calc((100% - 128px)/4);
+    }        
+}
+
+@media all and (min-width: 1530px) { 
+    .gallery-item{
+        width: calc((100% - 160px)/5); 
+    }        
+}

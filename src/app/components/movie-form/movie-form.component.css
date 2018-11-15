@@ -1,0 +1,104 @@
+
+#movie-form{
+    background: whitesmoke;
+    max-width: 400px;
+    max-height: 425px;
+    padding: .15rem .15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+
+#movie-form.prompt{
+    max-height: 150px;    
+}
+
+.form-group{
+    width: 100%;
+    padding: .5rem 1rem;
+    margin-bottom: .5rem;
+}
+
+.form-heading{
+    color: white;
+    background: #815db0;
+    margin-bottom: 1rem;
+}
+
+label{
+    margin-bottom: .25rem;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.15rem;
+    color: #815db0;
+}
+
+input[type="text"]{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid;
+    padding: .15rem;
+    font-size: .85rem;
+}
+
+input[type="text"]:focus{
+    outline: none;
+    border-bottom: 2px solid #815db0;
+}
+
+.form-buttons-group{
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-buttons-group > button{
+    width: 100px;
+    padding: .35rem;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.form-buttons-group > button:first-child{
+    margin-right: .5rem;
+}
+
+.form-buttons-group > .btn-save{
+    background: #815db0;
+    border-bottom: .15rem solid #5d3a8a;
+    border-left: .15rem solid #5d3a8a;
+}
+
+.form-buttons-group > .btn-delete{
+    background: #d51515;
+    border-bottom: .15rem solid #a01515;
+    border-left: .15rem solid #a01515;
+}
+
+.form-buttons-group > .btn-cancel {
+    background: #696969;
+    border-bottom: .15rem solid #424242;
+    border-left: .15rem solid #424242;
+}
+
+.form-buttons-group > button:focus{
+    border: none !important;
+    outline: none;
+}
+
+.form-buttons-group > button:disabled{
+    filter: grayscale(100%)
+}
+
+.form-buttons-group > button:disabled:hover{
+    cursor: not-allowed;
+}

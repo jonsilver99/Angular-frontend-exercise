@@ -1,0 +1,24 @@
+<div id="scrollHelper" appLazyLoadOnScroll (DivBottomReached)="fetchMovies()" #scrollHelper>
+
+    <div id="gallery">
+        <div id="create-new-button" (click)="openMovieCreationModal()">
+            <i class="fa fa-plus-square"></i>
+        </div>
+
+        <ng-container *ngIf="MoviesList$ | async as Movies; else loading">
+            <app-movie-card *ngFor="let movie of Movies" [MovieDetails]="movie" class="gallery-item"></app-movie-card>
+        </ng-container>
+
+        <ng-template #loading>
+            <b>Loading...</b>
+        </ng-template>
+
+    </div>
+    <app-data-loading-indicator class="loading-indicator" [ngClass]="{'revealed': ShowLoadingIndicator}"></app-data-loading-indicator>
+
+</div>
+
+<!-- dynamic modals (create, edit, delete) -->
+<app-movie-create-modal></app-movie-create-modal>
+<app-movie-edit-modal></app-movie-edit-modal>
+<app-movie-delete-modal></app-movie-delete-modal>

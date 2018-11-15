@@ -1,0 +1,19 @@
+:host{
+    flex: 1;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    text-shadow: -2px 0px 5px mediumpurple, -3px 0px 0px white;
+    background: linear-gradient(to left, rgba(147, 112, 216, 0.75), rgba(103, 49, 174, 0.95)),
+    url(/assets/cinema-background1.jpg);
+    background-size: 100% 450%;
+    background-position: 0% 48%;
+    min-height: 14vh;
+    overflow: hidden;
+}
+
+h1{
+    white-space: nowrap;
+}
+

@@ -1,0 +1,54 @@
+<form id="movie-form" [formGroup]="MovieForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group form-heading">
+        <h2 *ngIf="EditedMovie; else createNew">
+            Edit movie: {{EditedMovie.Title}}
+        </h2>
+
+        <ng-template #createNew>
+            <h2>Create new movie</h2>
+        </ng-template>
+    </div>
+
+    <div *ngIf="!EditedMovie" class="form-group">
+        <label>
+            Movie id
+            <app-invalid-form-field *ngIf="fieldIsInvalid('imdbID')" [Errors]="MovieForm.get('imdbID').errors">
+            </app-invalid-form-field>
+        </label>
+        <input type="text" formControlName="imdbID" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>
+            Movie title
+            <app-invalid-form-field *ngIf="fieldIsInvalid('Title')" [Errors]="MovieForm.get('Title').errors">
+            </app-invalid-form-field>
+        </label>
+        <input type="text" formControlName="Title" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>
+            Movie release year
+            <app-invalid-form-field *ngIf="fieldIsInvalid('Year')" [Errors]="MovieForm.get('Year').errors">
+            </app-invalid-form-field>
+        </label>
+        <input type="text" formControlName="Year" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>
+            Film type
+            <app-invalid-form-field *ngIf="fieldIsInvalid('Type')" [Errors]="MovieForm.get('Type').errors">
+            </app-invalid-form-field>
+        </label>
+        <input type="text" formControlName="Type" class="form-control">
+    </div>
+
+    <div class="form-group form-buttons-group">
+        <button type="submit" class="btn-save" [disabled]="MovieForm.invalid || !MovieForm.dirty">Save</button>
+        <button type="button" class="btn-cancel" (click)="closeModal()">Cancel</button>
+    </div>
+
+</form>
