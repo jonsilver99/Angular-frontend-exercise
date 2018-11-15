@@ -23,7 +23,6 @@ export class Store {
 
     // actions
     appendMovies(newMovies: Movie[]) {
-        debugger;
         let oldMovieList = this.currentState.MovieList;
         let newState = Array.isArray(oldMovieList) ? [...oldMovieList, ...newMovies] : newMovies
         this.set('MovieList', newState)

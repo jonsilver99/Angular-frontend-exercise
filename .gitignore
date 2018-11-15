@@ -43,3 +43,5 @@ Thumbs.db
 
 # my ignores
 /unused
+package-lock.json
+
