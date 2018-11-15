@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '../../store/store';
@@ -6,8 +6,9 @@ import { Store } from '../../store/store';
 @Component({
     selector: 'app-movies-gallery',
     templateUrl: './movies-gallery.component.html',
-    styleUrls: ['./movies-gallery.component.no-breakpoints.css']
+    styleUrls: ['./movies-gallery.component.no-breakpoints.css'],
     // styleUrls: ['./movies-gallery.component.breakpoints.css']
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MoviesGalleryComponent implements OnInit, AfterViewInit {
 

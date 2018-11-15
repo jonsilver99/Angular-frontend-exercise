@@ -11,9 +11,21 @@
     background-position: 0% 48%;
     min-height: 14vh;
     overflow: hidden;
+    font-family: sans-serif;
 }
 
 h1{
+    position: relative;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
 }
 
+h1::after{
+    content: "By Yonatan Silberstein";
+    font-family: cursive;
+    font-size: 1.35rem;
+    margin-left: 32px;
+    text-shadow: none;
+    text-decoration: underline;
+}

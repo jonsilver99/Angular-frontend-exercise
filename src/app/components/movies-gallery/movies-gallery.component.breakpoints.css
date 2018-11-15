@@ -38,7 +38,7 @@
     flex-wrap: wrap;
     padding: 3rem 5rem;
     justify-content: flex-start;
-    min-width: 500px;
+    /* min-width: 500px; */
 }
 
 .gallery-item{
