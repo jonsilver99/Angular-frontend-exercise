@@ -6,5 +6,5 @@
 export const environment = {
     production: false,
     BASE_URL: "http://localhost:4200",
-    MOVIES_API:"http://www.omdbapi.com"
+    MOVIES_API:"https://www.omdbapi.com"
 };
