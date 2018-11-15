@@ -29,3 +29,25 @@ h1::after{
     text-shadow: none;
     text-decoration: underline;
 }
+
+
+/*******************
+    breakpoints
+*******************/
+@media all and (max-width: 760px){
+    h1{
+        flex-wrap: wrap;
+    }
+}
+
+@media all and (max-width: 480px){
+    h1{
+        font-size: 2rem;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 760px){
+    h1{
+        font-size: 3rem;
+    }
+}
